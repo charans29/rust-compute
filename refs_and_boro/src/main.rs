@@ -17,6 +17,17 @@ fn main() {
 
     return_a_string();
 
+    let v = vec![1, 2, 3];
+    let n = v[0];
+    give_and_take(&v, 4);
+    // let k = give_and_take(&mut v, 4);
+    println!("{} {}", n, k);
+
+}
+
+fn give_and_take(v: &Vec<i32>, n: i32) -> i32 {
+    v.push(n);
+    v.remove(0)
 }
 
 fn greet(g1: &String, g2: &String) -> (String, String) {
